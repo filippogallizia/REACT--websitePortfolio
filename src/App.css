@@ -1,38 +1,325 @@
-.App {
-  text-align: center;
+body {
+  border: 1px solid blue;
+  margin: 0;
+  padding: 0;
+  font-family: "Tangerine";
+  font-size: 18px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* general styles */
+
+.container {
+  border: 1px solid red;
+  max-width: 1200px;
+  padding: 0 2em;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page {
+  margin: auto;
+  border: 1px solid red;
+  /* text-align: center; */
+  margin-top: 5em;
+  margin-bottom: 5em;
+  /* margin-top: 3em; */
+}
+
+.a-link {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bolder;
+  text-decoration: none;
+  color: black;
+}
+
+/* typografy */
+
+.Subtitle {
+  font-family: playfair_displaybold, serif, sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 80px;
+  text-transform: none;
+}
+
+.main-title {
+  font-family: montserratlight, serif, sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: bolder;
+  letter-spacing: normal;
+  line-height: 36px;
+  text-transform: none;
+}
+
+h3 {
+  font-family: playfair_displaybold, serif, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: bolder;
+  letter-spacing: normal;
+  line-height: 80px;
+  text-transform: none;
+}
+
+/* nav */
+
+.nav {
+  margin-top: 2.5em;
+}
+
+.nav-container {
+  border: 1px solid blue;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+.nav-link:hover {
+  background-color: chartreuse;
+}
+.email {
+  list-style-type: none;
+  font-size: large;
+  font-weight: bold;
+}
+
+/* header */
+
+.headerTitle-container {
+  border: 1px solid blue;
+  display: flex;
   align-items: center;
+  /* justify-content: center; */
+  /* display: grid; */
+}
+.headerTitle-container h1,
+.headerTitle-container h2 {
+  position: absolute;
+  /* font-size: 2.5rem;
+  font-weight: 900; */
+}
+.color-ball {
+  background-color: chartreuse;
+  border-radius: 100%;
+  width: 75px;
+  height: 75px;
+}
+
+/* homepage */
+
+.page-home {
+  margin-top: 5em;
+}
+.gridChild-home.profile-img-container {
+  border: 1px solid yellow;
+  margin-top: 2em;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0.5em;
+  /* margin-bottom: 5em; */
+  /* order: 1; */
+}
+.profile-img {
+  max-width: 270px;
+  border-radius: 100%;
+}
+.gridParent-home {
+  display: grid;
+  justify-items: center;
+}
+.gridParent-social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+.gridParent-social-links i {
+  color: black;
+  font-size: 3em;
+  margin-top: 0.5em;
+  padding: 8px;
+}
+
+/* contact page */
+
+.contact-img {
+  max-width: 400px;
+  max-height: 200px;
+}
+.form-textarea {
+  border: 1px solid #888;
+  outline: none;
+}
+
+/* cv page */
+
+.skills {
+  border: 1px solid orange;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.skill-category {
+  /* text-align: left; */
+  border: 1px solid orange;
+  padding: 0;
+}
+.grid-1 {
+  grid-column: span 2;
+}
+
+.download-button {
+  display: inline-block;
+  border: 3px solid black;
+  border-radius: 10%;
+  margin-top: 3em;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: white;
+  color: black;
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.download-button:hover,
+.download-button:focus {
+  background: black;
   color: white;
 }
+/* project page */
 
-.App-link {
-  color: #61dafb;
+.project-grid {
+  /* padding: 5em; */
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  margin-top: 1em;
+
+  justify-items: center;
+}
+.grid-child {
+  border: black 3px solid;
+  border-radius: 5%;
+  margin-top: 1em;
+  padding: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.project-img {
+  border: oldlace solid 2px;
+  margin: auto;
+}
+
+/* media query */
+
+@media only screen and (min-width: 916px) {
+  /* general */
+
+  .page {
+    text-align: left;
   }
-  to {
-    transform: rotate(360deg);
+  .headerTitle-container {
+    justify-content: left;
+  }
+  .headerTitle-container h1 {
+    font-size: 88px;
+    order: 1;
+  }
+
+  /* nav */
+
+  .nav {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-link {
+    margin: 0.5em;
+  }
+
+  /* home page */
+
+  .page-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+  }
+  .gridChild-home.profile-img-container {
+    margin-top: 0;
+    display: normal;
+
+    /* margin-bottom: 5em; */
+    /* order: 1; */
+  }
+  .profile-img {
+    max-width: 350px;
+  }
+  .gridParent-home {
+    grid-template-columns: auto auto;
+    margin-bottom: 5em;
+    /* align-items: center;
+    justify-content: right;
+    justify-items: start; */
+
+    grid-auto-rows: minmax(100px, auto);
+    border: 1px solid paleturquoise;
+  }
+  .gridChild-home {
+    justify-self: start;
+    border: 1px solid red;
+  }
+  .gridParent-social-links {
+    border: 1px solid red;
+    width: 70%;
+  }
+  .gridParent-social-links i {
+    font-size: 4em;
+    padding: 8px;
+  }
+
+  /* cv page */
+
+  .skills {
+    grid-template-columns: 30% 30%;
+  }
+
+  .grid-1 {
+    grid-column: span 2;
+  }
+  .skill-category {
+    text-align: left;
+    padding: 0;
+  }
+
+  /*project page*/
+
+  .project-grid {
+    /* padding: 5em; */
+    justify-items: start;
+    grid-template-columns: 1fr 1fr;
   }
 }
+/* to fix
+
+- link nav space in between
+- color ball position
+- home page sovrrappongono immagine e titolo (mobile e no)
+
+*/
