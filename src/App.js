@@ -8,32 +8,23 @@ import Contacts from "./Contacts";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
-  const [visible, setVisible] = useState(false);
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
   });
-
   useEffect(() => {
     function handleResize() {
       setDimensions({
         height: window.innerHeight,
         width: window.innerWidth,
       });
-      //console.log(dimensions);
+      console.log(dimensions);
     }
-
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   });
-
-  useEffect(() => {
-    setTimeout(() => setVisible(true), 1000);
-    return clearTimeout();
-  }, []);
 
   return (
     <div className="container">
@@ -87,7 +78,7 @@ function App() {
               <Contacts />
             </Route>
             <Route path="/">
-              {visible && <Home2 />} <Projects />
+              <Home2 /> <Projects />
               <Cv />
               <About /> <Contacts />{" "}
             </Route>

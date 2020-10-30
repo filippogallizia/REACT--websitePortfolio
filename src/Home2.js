@@ -1,23 +1,20 @@
 import React from "react";
 import MyImmage from "./immages/MyImmage2.jpg";
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
 
 function Home2() {
   return (
     <div className="page-home">
       <div className="gridParent-home">
         <div className="gridChild-home">
-          <div className="headerTitle-container">
+          <div className="headerTitle-container home">
             <div className="color-ball home"></div>
-            <h1 className="main-title">Hi, I am Filippo, </h1>
+            <h1 className="main-title">Hi, I'm Filippo, </h1>
           </div>
-          <h2>a Junior Web Developer.</h2>
-          <p>
+          <h3>a Full Stack Web Developer.</h3>
+          <h4>
             HTML/CSS | Bootstrap | JavaScript | React | NodeJS | Express |
             MongoDB
-          </p>
+          </h4>
           <p>
             {" "}
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -59,7 +56,5 @@ function Home2() {
     </div>
   );
 }
-
-// className="image-container"
 
 export default Home2;

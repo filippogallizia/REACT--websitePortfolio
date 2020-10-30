@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import MyImmage from "./immages/foto3_web.jpg";
 
 export default function Contacts() {
   const [value, setValue] = useState({
@@ -52,16 +51,19 @@ export default function Contacts() {
         <div className="color-ball Contacts"></div>
         <h2 className="Subtitle">Contacts</h2>
       </div>
+      <p>FILIPPO GALLIZIA</p>
+      <p>LISBOA | PORTUGAL</p>
+      <p>galliziafilippo@gmail.com | +351 915 702 684</p>
       <div>
-        <h4>
+        <h4 className="hfour-contact">
           Want to work together? Just want to say hi? <br></br>
           Drop me a line down here.
         </h4>
-        <div className="form-containter">
+        <div className="form-container">
           <input
             className="form-input"
             type="text"
-            placeholder="your name"
+            placeholder="Your Name"
             name="name"
             age="52"
             value={value.name}
@@ -71,7 +73,7 @@ export default function Contacts() {
           <input
             className="form-input"
             type="text"
-            placeholder="email"
+            placeholder="Your Email"
             name="email"
             value={value.email}
             onChange={valueHandler}
@@ -84,15 +86,11 @@ export default function Contacts() {
             value={value.msg}
             onChange={valueHandler}
           ></textarea>
-
           <br />
           <button className="form-button" onClick={buttonHandler}>
-            SEND
+            SEND EMAIL
           </button>
         </div>
-      </div>
-      <div>
-        <img className="contact-img" src={MyImmage} alt="me :)"></img>
       </div>
     </div>
   );
